@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trading Journal Pro</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📈 Trading Journal Pro</h1>
+<div class="dashboard">
+
+<div class="box">
+<h3>Total Trades</h3>
+<h2 id="totalTrades">0</h2>
+</div>
+
+<div class="box">
+<h3>Total P/L</h3>
+<h2 id="totalPL">₹0</h2>
+</div>
+
+<div class="box">
+<h3>Win Rate</h3>
+<h2 id="winRate">0%</h2>
+</div>
+
+</div>
+
+<div class="card">
+
+<input type="date" id="date">
+
+<select id="index">
+<option>NIFTY</option>
+<option>BANKNIFTY</option>
+<option>FINNIFTY</option>
+<option>MIDCPNIFTY</option>
+<option>STOCK</option>
+</select>
+
+<input type="text" id="stock" placeholder="Stock Name">
+
+<input type="number" id="buy" placeholder="Buy Price">
+
+<input type="number" id="sell" placeholder="Sell Price">
+
+<input type="number" id="qty" placeholder="Quantity">
+
+<input type="number" id="sl" placeholder="Stop Loss">
+
+<textarea id="logic" placeholder="Trade Logic"></textarea>
+
+<textarea id="mistake" placeholder="Mistake"></textarea>
+
+<textarea id="lesson" placeholder="Lesson Learned"></textarea>
+
+<label>📷 Attach Screenshot</label>
+
+<input type="file" id="screenshot" accept="image/*">
+
+<br><br>
+
+<button onclick="saveTrade()">💾 Save Trade</button>
+
+</div>
+
+<h2>📚 My Trades</h2>
+
+<div id="tradeList"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
