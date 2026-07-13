@@ -163,3 +163,29 @@ document.getElementById("winRate").innerText = rate + "%";
 }
 
 showTrades();
+function backupData(){
+
+const trades = JSON.parse(localStorage.getItem("trades")) || [];
+
+if(trades.length===0){
+alert("No data available for backup.");
+return;
+}
+
+const data = JSON.stringify(trades,null,2);
+
+const blob = new Blob([data],{type:"application/json"});
+
+const url = URL.createObjectURL(blob);
+
+const a = document.createElement("a");
+
+a.href = url;
+
+a.download = "TradingJournal_Backup.json";
+
+a.click();
+
+URL.revokeObjectURL(url);
+
+}
